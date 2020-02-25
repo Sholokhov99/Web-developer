@@ -1,0 +1,58 @@
+@import url('./globalVariables.css');
+.slider {
+    overflow: hidden;
+    width: 898px;
+}
+
+.slide {
+    position: relative;
+    left: 1px;
+    display: flex;
+    justify-content: space-between;
+    transition: all ease 1s;
+}
+
+
+/*w: 405px; h:273px 
+    894px
+*/
+
+.slide img {
+    width: 405px;
+    height: 273px;
+    margin-right: 70px;
+    display: absolute;
+    border: 2px solid var(--main_color);
+    border-radius: 8px;
+    box-shadow: 4px 2px 5px rgba(0, 0, 0, .75);
+}
+
+.controlPanelSlider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controlPanelSlider a {
+    color: var(--load_body_light);
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 13px;
+}
+
+.angleSlider,
+.circleSlider {
+    font-size: 48px;
+    cursor: pointer;
+    transition: all ease .8s;
+}
+
+.angleSlider:hover,
+.circleSlider:hover {
+    color: var(--load_body_light);
+}
+
+.circleSlider {
+    font-size: 12px;
+    margin: 0px 3px;
+}

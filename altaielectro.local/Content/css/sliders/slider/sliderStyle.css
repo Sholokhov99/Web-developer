@@ -1,0 +1,85 @@
+:root{
+    --def_height_img: 369px;
+}
+.slider{
+    width: 100%;
+    overflow: hidden;
+}
+.slider>.slider_angle{
+    background: transparent;
+    height: 100%;
+    width: 863px;
+    display: flex;
+    position: absolute;
+    height: var(--def_height_img);
+    z-index: 999;
+}
+
+.slider>.slider_angle>spannth-child(1){
+    display: flex;
+    height: var(--def_height_img);
+    width: 72px;
+    z-index: 999;
+}
+.slider>.slider_angle>span:nth-child(1){
+    align-self: center;
+    flex-grow: 1;
+    
+}
+.slider>.slider_angle>span:nth-child(2){
+    align-self:flex-end;
+    flex-grow: 1;
+}
+.slider>.slider_angle>span:nth-child(2) i{
+    padding: 0;
+    margin: 0px 10px 5px 0px;
+    font-size: 14px
+}
+.slider>.slider_angle>span:nth-child(3){
+    align-self: center;
+}
+.slider>.slider_angle>span>i{
+    font-size: 72px;
+    color: rgba(255,255,255, .2);
+    align-self: center;
+    margin: auto;
+    transition: all ease .6s;
+    cursor: pointer;
+    padding: 10px;
+}
+.slider>.slider_angle>span>i:hover{
+color: white;
+}
+/*
+.slider>span:nth-child(3){
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 0;
+    background: green;
+}
+.slider>.slider_angle>spannth-child(1)>i{
+    font-size: 72px;
+    color: rgba(255,255,255, .2);
+    align-self: center;
+    margin: auto;
+    transition: all ease .6s;
+    cursor: pointer
+}
+.slider>span>i:hover{
+    color: white;
+}*/
+.slider_left_angle{
+    
+}
+.slider>#slide{
+    position: relative;
+    display: flex;
+    left: 0px;
+    transition: all ease 2s;
+    
+}
+.slider>#slide>img{
+    width: 100%;
+    height: var(--def_height_img);
+    z-index: 1;
+}

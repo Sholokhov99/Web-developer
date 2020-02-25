@@ -1,0 +1,104 @@
+@import url("../../css/fonts.css");
+@import url("../../css/variables.css");
+
+.sliderGods{
+    width: 1197px;
+    margin: auto;
+    overflow: hidden;
+}
+.sliderGods>.title-sliderGods{
+    padding: var(--main-side);
+    border: 1px solid silver;
+    border-top: 2px solid var(--main_color);
+    display: flex;
+    border-radius: 8px 8px 0px 0px ;
+}
+.sliderGods>.title-sliderGods>h3{
+    margin: 0px;
+    flex-grow: 1;
+        align-self: center;
+}
+.sliderGods>.title-sliderGods>span{
+    font-size: 28px;
+    align-self: center;
+    color: var(--main_dark_color);
+}
+/* Стрелочки управления слайдером */
+.sliderGods>.title-sliderGods>span>i{
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all ease .7s;
+}
+.sliderGods>.title-sliderGods>span>i:hover {color: var(--main_color); }
+
+/* Лента с картинками */
+.sliderGods>.slideGods{
+    position: relative;
+    padding: 0;
+    margin: var(--main-side) 0;
+    display: flex;
+    left: 0;
+    transition: all ease 1s;
+}
+.sliderGods>.slideGods .card{
+    position: relative;
+    display: inline-block;
+    color: white;
+    transition: all ease .6s;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    min-width: 191px;
+    min-height: 191px;
+    margin: 0px 5px;
+    padding: 0px;
+}
+.sliderGods>.slideGods .card:first-child{
+    margin: 0px 5px 0px 0px;
+}
+.sliderGods>.slideGods> .card:last-child{
+    margin: 0px 0px 0px 5px;
+}
+.sliderGods>.slideGods .card p{
+  padding: 0;
+  margin: 0;
+}
+.sliderGods>.slideGods .card>img{
+  z-index: 1;
+}
+.sliderGods>.slideGods .card>div{
+  position: absolute;
+  background-color: rgba(0,0,0,.5);
+  z-index: 999;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  opacity: 0;
+  transition: all ease .6s;
+}
+.sliderGods>.slideGods .card:hover div{
+    opacity: 1;
+}
+.sliderGods>.slideGods .card .name-gods{
+    font-size: 12px;
+    padding: 5px 0px 0px 0px;
+}
+.sliderGods>.slideGods .card .name-gods>font{
+  color: var(--main_color);
+  font-weight: bold;
+}
+.sliderGods>.slideGods .card>div>a{
+    color: white;
+    font-size: 28px;
+}
+.sliderGods>.slideGods .card .price{
+  text-align: right;
+  padding: 0px 5px 5px 0px;
+  font-size: 12px;
+}
+/*
+    1200px
+    5 плиток
+    отступ 5px * 8
+    200 px одна картинка
+*/

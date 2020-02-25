@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>KSIS</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link href="./css/style.css" rel="stylesheet" />
+    <link href="./slider/css/slider.css" rel="stylesheet" />
+    <link href="./css/media.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header id="header">
+        <div class="Layout_Center">
+            <ul class="topInfoPanel">
+                <li class="mapMarker">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <p class="cityPoint">Алтайский край, г.Барнаул, п.Центральный, ул.Липецкая 32</p>
+                </li>
+                <li class="feedback">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <p class="phone">+7(952)001-26-37</p>
+                    <button class="defBtn" id="callMe">Заказать звонок</button>
+                </li>
+            </ul>
+        </div>
+
+        <nav class="topMenu">
+            <div class="Layout_Center">
+                <ul>
+                    <li class="logo">
+                        <i class="fa fa-qrcode" aria-hidden="true"></i>
+                        <p>KISSO</p>
+                    </li>
+                    <li>
+                        <ul class="horizontalMenu">
+                            <li><a href="#" class="isPage">Главная</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Обратная связь</a></li>
+                            </a>
+                            <li><a href="#">Наши заказы</a></li>
+                            <li style="margin: 0"><a href="#">Отзывы</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <article id="startContainer">
+            <div class="slogon">
+                <p>Хотите украсить свой участок?</p>
+                <p>kisso поможет</p>
+                <button class="defBtn makeOrder">Сделать заказ</button>
+            </div>
+        </article>
+        <!-- Услуги -->
+        <article class="content">
+            <div class="Layout_Center">
+                <span class="title">
+            <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+            <p>Услуги</p>
+          </span>
+
+                <div class="container">
+                    <div class="card">
+                        <i class="fa fa-tree" aria-hidden="true"></i>
+                        <p>Дизайн садового участка</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa fa-500px" aria-hidden="true"></i>
+                        <p>Разработка уникального <br />проекта ланшафта</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa fa-bank" aria-hidden="true"></i>
+                        <p>Благоустройство <br />приусадебной территории</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa fa-wrench" aria-hidden="true"></i>
+                        <p>Благоустройство <br />приусадебной территории</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- Наши заказы -->
+        <article class="content ourOrder">
+            <div class="Layout_Center">
+                <span class="title">
+                  <i class="fa fa-diamond " aria-hidden="true"></i>
+                  <p>Наши заказы</p><br>
+                </span>
+                <!-- Slider -->
+                <div style="display: flex;">
+                    <div class="slider">
+                        <div class="slide" id="slideId">
+                            <img src="./slider/img/1.png" alt="Картинка не загрузилась" />
+                            <img src="./slider/img/2.png" alt="Картинка не загрузилась" />
+                            <img src="./slider/img/3.png" alt="Картинка не загрузилась" />
+                            <img src="./slider/img/1.png" alt="Картинка не загрузилась" />
+                            <img src="./slider/img/1.png" alt="Картинка не загрузилась" />
+                            <img src="./slider/img/1.png" alt="Картинка не загрузилась" />
+                            <img src="./slider/img/1.png" alt="Картинка не загрузилась" />
+                            <img src="./slider/img/1.png" alt="Картинка не загрузилась" />
+                            <img src="./slider/img/1.png" alt="Картинка не загрузилась" />
+                            <img src="./slider/img/3.png" alt="Картинка не загрузилась" />
+                        </div>
+                        <div class="controlPanelSlider">
+                            <i class="fa fa-angle-left angleSlider" aria-hidden="true" onclick="ReturnSlide()"></i>
+
+                            <i class="fa fa-circle circleSlider" aria-hidden="true"></i>
+                            <i class="fa fa-circle circleSlider" aria-hidden="true"></i>
+                            <i class="fa fa-circle circleSlider" aria-hidden="true"></i>
+
+                            <i class="fa fa-angle-right angleSlider" aria-hidden="true" onclick="NextSlide()"></i>
+                            <a href="#">Показать еще...</a>
+                        </div>
+                    </div>
+                    <span class="imgOrder">
+                    <img src="/img/orderAdvertising.png" class="orderAdvertising" width="428px" />
+                    </span>
+                </div>
+            </div>
+            <img src="./img/footerLineOrder.png" class="footerLineOrder" />
+        </article>
+
+
+        <article class="content">
+            <div class="Layout_Center">
+                <span class="title">
+                <i class="fa fa-ticket " aria-hidden="true"></i>
+                <p>Почему именно Мы</p><br>
+              </span>
+
+                <canvas id="orderCanvas" width=330 height=330>
+              </canvas>
+                <script type="text/javascript" src="./js/graphics.js"></script>
+                <script>
+                    DrawOrderCanvars("orderCanvas");
+                    /*
+                                                            var canvas = document.getElementById('orderCanvas');
+                                                            var graphics = canvas.getContext("2d");
+                                                            //
+                                                            //  Data graphics
+                                                            //
+                                                            var x = canvas.width / 2;
+                                                            var y = canvas.height / 2;
+                                                            var radius = 70;
+                                                            var startAngel = 1.5 * Math.PI;
+                                                            var endAnger = 0.5 * Math.PI;
+
+                                                            // width rect 125px
+                                                            // (71;9) start elipse
+                                                            // size box 331,336
+                                                            //
+                                                            //  Drawing
+                                                            //
+                                                            graphics.beginPath();
+                                                            graphics.arc(71, 10, 12.5, 0, 2 * Math.PI, false);
+                                                            graphics.fillStyle = 'red';
+                                                            graphics.fill();
+                                                            graphics.lineWidth = 1;
+                                                            graphics.strokeStyle = 'red';
+                                                            graphics.stroke();
+                                                            /*
+                                                            graphics.beginPath();
+                                                            graphics.bezierCurveTo(10, 0, 150, 70, 100, 100);
+                                                            graphics.lineWidth = 5;
+                                                            graphics.stokeStyle = "#00ff00";
+                                                            graphics.stroke();*/
+
+
+                    /*
+                    var graphics = canvas.getContext("2d");
+                    graphics.stokeStyle = "#00ff00";
+                    graphics.lineWidth = 3;
+                    graphics.beginPath();
+                    graphics.arc(75, 130, 75, 1.25 * Math.PI, 1.75 * Math.PI, false);
+                    //graphics.closePath();
+                    graphics.stroke();*/
+                </script>
+                <!--
+                <div>
+                    <div class="rectInfo">
+                        <span>
+                            <p>Что вы получите?</p>
+                            <p>У вас будет красивый и современный дизайн. Ваши соседи будут завидовать вашему оформлению ладшафта. <br /><br />Все проводимые работы выполеялись специалистами, что исключает явные или скрытые ошибки.<br /><br />Гарантию на
+                                выполненную работу</p>
+                        </span>
+                    </div>
+                </div>
+                -->
+            </div>
+        </article>
+
+    </main>
+    <script type="text/javascript" src="./js/Jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./slider/js/SourceSlider.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

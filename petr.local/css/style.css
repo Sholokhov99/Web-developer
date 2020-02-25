@@ -1,0 +1,351 @@
+@import url('./fonts.css');
+@import url('./globalVariables.css');
+
+/*
+  Глобальные стили
+*/
+
+.defBtn {
+    padding: 7px 26px;
+    border: 1px solid var(--main_color);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    cursor: pointer;
+}
+
+.title>i {
+    font-size: 30px;
+    padding-right: 12px;
+    color: var(--main_color);
+}
+
+.title>p {
+    color: var(--load_body);
+    display: inline-block;
+    font-size: 30px;
+    font-family: Montserrat-Bold;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--main_cont);
+    /* свойство scroll-behavior не наследуется, применяется к прокручиваемым блокам */
+}
+
+body {
+    font-family: var(--main_count);
+    margin: 0px;
+    background: var(--load_body);
+}
+
+.Layout_Center {
+    margin: auto;
+    width: 1600px;
+    transition: all ease .6s;
+}
+
+.logo {
+    font-size: 18px;
+    letter-spacing: 9px;
+    font-weight: bold;
+    font-family: var(--count_monterat-Black);
+}
+
+.logo>i {
+    font-size: 24px;
+    color: var(--main_color);
+}
+
+.logo p {
+    color: #444444;
+    margin: auto;
+    text-align: center;
+    padding: 0;
+}
+
+
+/*
+*
+*
+*   Настройка верхней информационной панели и навигации
+*
+*
+*/
+
+.topInfoPanel {
+    color: white;
+    display: -webkit-flex;
+    display: flex;
+    margin: 0;
+    padding: 3px 0;
+}
+
+.topInfoPanel li {
+    list-style: none;
+    margin: auto;
+    font-size: 14px;
+}
+
+.topInfoPanel li p {
+    display: inline-block;
+    margin: auto;
+}
+
+.topInfoPanel>.mapMarker {
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.topInfoPanel>.mapMarker p {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.topInfoPanel>.mapMarker>.cityPoint {
+    margin-left: 10px;
+}
+
+.topInfoPanel>.feedback>.phone {
+    margin-right: 61px;
+    font-family: Montserrat-SemiBold;
+}
+
+
+/* Навигация */
+
+.topMenu {
+    background: white;
+    padding: 5px 0px;
+    border-bottom: 1px solid var(--main_color);
+}
+
+.topMenu ul {
+    display: -webkit-flex;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.topMenu ul li {
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.topMenu ul .logo {
+    display: inline-block;
+    flex-grow: 1;
+}
+
+.topMenu ul .logo p {
+    display: inline-block;
+}
+
+
+/* horizontalMenu */
+
+.horizontalMenu {
+    margin: auto;
+    padding: 0;
+}
+
+.horizontalMenu a {
+    text-decoration: none;
+    color: black;
+    transition: all ease .8s;
+}
+
+.horizontalMenu a:hover {
+    color: var(--main_color);
+}
+
+.horizontalMenu li {
+    display: inline-block;
+    list-style: none;
+    margin: 0px 15px 0px 0px;
+    padding: 0px;
+}
+
+.horizontalMenu .isPage {
+    color: var(--main_color);
+}
+
+
+/*
+*
+*
+*
+*
+*
+*/
+
+#startContainer {
+    background: url('../img/background.png') no-repeat fixed;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slogon {
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    /*чтобы контент не расползался*/
+    transition: all ease .8s;
+    font-family: Montserrat-Black;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 5px 2px 4px black;
+    /*letter-spacing: 6px;*/
+}
+
+.slogon p:nth-child(1) {
+    font-size: 36px;
+    transition: all ease .8s;
+    margin: 0 0 10px 0;
+}
+
+.slogon p:nth-child(2) {
+    font-size: 30px;
+    font-family: Montserrat-Regular;
+    transition: all ease .8s;
+    margin: 0 0 20px 0;
+}
+
+.slogon .makeOrder {
+    background-color: var(--load_body);
+    width: 223px;
+    padding: 15px 0px;
+    font-size: 16px;
+    transition: all ease .8s;
+    font-family: Montserrat-Regular;
+}
+
+.slogon .makeOrder:hover {
+    box-shadow: 0px 0px 15px black;
+    color: #DCDCDC;
+}
+
+
+/*
+  Main content
+*/
+
+.content {
+    overflow: hidden;
+    margin: auto;
+    transition: all ease 1s;
+    padding: 0px 0px 100px 0px;
+    background: url('../img/backlineeffect.png') repeat;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 85px;
+    justify-content: center;
+    /*
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  */
+}
+
+.card {
+    display: flex;
+    align-content: center;
+    width: 342px;
+    height: 97px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px var(--main_color);
+}
+
+.card>i {
+    display: inline-block;
+    align-self: center;
+    padding-left: 29px;
+    flex-grow: 1;
+    font-size: 36px;
+    color: var(--main_color);
+}
+
+.card>p {
+    align-self: center;
+    padding-right: 36px;
+    font-size: 14px;
+    text-align: left;
+}
+
+
+/*
+  Наши заказы
+*/
+
+.ourOrder {
+    background: #f1f2f6;
+    border-bottom: 1px solid transparent;
+    border-image: url('../img/footerLineOrder.png');
+}
+
+.ourOrder .imgOrder {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.ourOrder .imgOrder .orderAdvertising {
+    width: 428px;
+    height: 392px;
+}
+
+.footerLineOrder {
+    width: 100%;
+    position: absolute;
+    margin-top: 100px;
+    transition: all ease 1s;
+}
+
+#orderCanvas {
+    border: 1px solid silver
+}
+
+.rectInfo {
+    --rectSize: 400px;
+    width: var(--rectSize);
+    height: var(--rectSize);
+    border-radius: 50%;
+    box-shadow: 5px 0px 0px 3px var(--main_color);
+    display: flex;
+    overflow: hidden;
+    /*
+    border: 1px solid var(--main_color);
+    border-width: 0px 5px 0px 0px;*/
+}
+
+.rectInfo>span {
+    align-self: center;
+    border-radius: 50%;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.rectInfo>span>p:nth-child(1) {
+    font-weight: bold;
+    text-align: center;
+}
+
+.rectInfo>span>p:nth-child(2) {
+    font-family: Montserrat-Regular;
+}

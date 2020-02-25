@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html, body {padding: 0;margin: 0;}
+            * {box-sizing: border-box;}
+            body {
+                background: url('bg.png');
+                display: flex;
+                width: 100vw;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+            }
+            div{
+                margin: 0 auto;display: block
+            }
+            canvas {
+              background: black;
+
+              display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <canvas id="score" width="200" height="40"></canvas>
+            <canvas id="game" width="1200" height="720"></canvas>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+
+</html>

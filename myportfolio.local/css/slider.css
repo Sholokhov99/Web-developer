@@ -1,0 +1,14 @@
+:root {
+    --height_slider: 250px;
+}
+
+.slider {
+    width: 100%;
+    height: var(--height_slider);
+    border: 1px solid #000000;
+}
+
+.line_slide>img {
+    height: var(--height_slider);
+    margin-right: 80px;
+}

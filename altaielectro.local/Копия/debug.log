@@ -1,0 +1,2 @@
+[0219/201132.500:ERROR:process_info.cc(359)] UncheckedAllocate
+[0219/201134.567:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\Win10Pro\AppData\Roaming\Brackets\live-dev-profile\Crashpad\reports\f35ca1f6-f18c-410e-a29a-74c46210c4db.dmp: Процесс не может получить доступ к файлу, так как этот файл занят другим процессом. (0x20)

@@ -1,0 +1,11 @@
+@media (max-width: 1200px) {
+    .centerContent{
+        width: 98%;
+    }
+}
+
+@media (max-width: 800px) {
+    form{
+        width: 98%;
+    }
+}

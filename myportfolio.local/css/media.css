@@ -1,0 +1,27 @@
+@media (max-width: 1200px) {
+    /*
+    #top_menu {
+        background-color: rebeccapurple;
+    }*/
+    .Layout_Center {
+        width: 100%;
+        padding: 0px 10px;
+    }
+    .potfolio_effect {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+    .potfolio_effect>img {
+        height: auto;
+    }
+    .about .main_about_info>p {
+        padding: 0px 20px 0px 0px;
+    }
+}
+
+@media (max-width: 520px) {
+    .title {
+        line-height: 46px;
+    }
+}

@@ -1,0 +1,18 @@
+ :root {
+    /*Fonts*/
+    --main_cont: Montserrat-Regular;
+    --count_monterat-Black: Montserrat-Black;
+
+    /* Margin & Padding */
+    --margin_ability: 10px;
+    --padding_between_sections: 200px 0px 200px 0px;
+
+    /* Colors */
+    --main_color: #706fd3;
+    --main_title_color: silver;
+    --main_color_light: #DB30E6;
+    --load_body: #2f3542;
+    --load_body_light: #7f8c8d;
+/*    --load_body: #4D5366;*/
+    --main-color-box-shadow: #323747;
+}

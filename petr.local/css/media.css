@@ -1,0 +1,11 @@
+@media (max-width: 1600px)
+{
+    .Layout_Center{
+        width: 98%;
+        
+    }
+    #header{
+        background-color: coral;
+    }
+    
+}

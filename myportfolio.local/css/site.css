@@ -1,0 +1,555 @@
+@import url('./fonts.css');
+ :root {
+    --main_color: #C000CD;
+    --main_color_light: #DB30E6;
+    --main_cont: Montserrat-Regular;
+    --main_title_color: silver;
+    --margin_ability: 10px;
+    --load_body: #4D5366;
+    --padding_between_sections: 200px 0px 200px 0px;
+    --main-color-box-shadow: #323747;
+}
+
+
+/*
+    main color: #C000CD
+   */
+
+html {
+    scroll-behavior: smooth;
+    /* свойство scroll-behavior не наследуется, применяется к прокручиваемым блокам */
+}
+
+body {
+    font-family: var(--main_cont);
+    margin: 0px;
+    background: var(--load_body);
+}
+
+main {
+    font-family: sans-serif;
+    padding: 0px;
+    background-color: var(--load_body);
+}
+
+.block_user_select {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.Layout_Center {
+    margin: auto;
+    width: 1200px;
+}
+
+.padding_top {
+    padding-top: 200px;
+}
+
+.flex {
+    display: flex;
+}
+
+.icon-social {
+    height: 20px;
+    margin: 5px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.number_title {
+    color: var(--main_title_color);
+}
+
+.title {
+    font-size: 48px;
+    letter-spacing: 0.1em;
+    /*color: var(--main_title_color);*/
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    line-height: 46px;
+    transition: 1s;
+    -o-transition: 1s;
+    -moz-transition: 1s;
+    -webkit-transition: 1s;
+    display: block;
+    position: relative;
+    white-space: normal;
+}
+
+
+/*
+*
+*   Top menu
+*
+*/
+
+.style_top_menu {
+    height: 60px;
+}
+
+#home-fon {
+    background-image: url(../img/2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+    overflow: hidden;
+    margin: 0px;
+    width: 100%;
+    height: 900px;
+    transition: 0.5;
+    -o-transition: 0.5;
+    -moz-transition: 0.5;
+    -webkit-transition: 0.5;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+
+/*
+Меню
+*/
+
+#top_menu {
+    background: transparent;
+    height: auto;
+    position: fixed;
+    width: 100%;
+    transition: all ease .8s;
+    -o-transition: all ease .8s;
+    -webkit-transition: all ease .8s;
+    -moz-transition: all ease .8s;
+    -ms-transition: all ease .8s;
+    z-index: 9999999;
+}
+
+#menu {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: flex-start;
+    list-style: none;
+    align-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+#menu a {
+    padding: 10px;
+    align-self: center;
+    color: #fff;
+    text-decoration: none;
+    transition: all ease .6s;
+    -o-transition: all ease .6s;
+    -ms-transition: all ease .6s;
+    -webkit-transition: all ease .6s;
+}
+
+#menu a:hover {
+    color: var(--main_color_light);
+}
+
+#menu .logo {
+    margin-right: 30px;
+}
+
+#menu .logo>img {
+    height: 40px;
+    vertical-align: middle;
+}
+
+.start_info {
+    transition: all ease 1s;
+    margin-top: auto;
+}
+
+.my_name {
+    /*font: normal normal normal 75px/1.4em 'arial black', arial-w01-black, arial-w02-black, 'arial-w10 black', sans-serif;*/
+    font-family: Arial black;
+    color: #fff;
+    font-size: 75px;
+    vertical-align: middle;
+    letter-spacing: 0.1em;
+    margin: 223px 0px 49px 0;
+}
+
+.myName {
+    font: normal normal normal 75px/1.4em 'arial black', arial-w01-black, arial-w02-black, 'arial-w10 black', sans-serif;
+    color: #fff;
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 5px;
+    letter-spacing: 0.1em;
+    display: block;
+}
+
+.my_main_direction {
+    letter-spacing: 0.18em;
+    font-family: sans-serif;
+    font-size: 24px;
+    color: #fff;
+}
+
+.short_my_info {
+    font-size: 20px;
+}
+
+.arrow_down {
+    margin: 60px 0px;
+}
+
+
+/*
+*
+*   Основное тело сайта
+*
+*/
+
+
+/*Навыки*/
+
+.skills {
+    background: url('../img/test.png') no-repeat center fixed;
+    background-size: cover;
+    width: 100%;
+    background-color: #464646;
+    padding: var(--padding_between_sections);
+    overflow: hidden;
+}
+
+.scale_html {
+    width: 0px;
+    align-self: center;
+    border-top: 12px solid rgba(0, 214, 70, 1);
+    transition: all ease 1s;
+}
+
+.ability {
+    display: flex;
+    font-weight: bold;
+}
+
+.ability_shadow {
+    color: #fff;
+    text-shadow: -0 -1px 0 #000000, 0 -1px 0 #000000, -0 1px 0 #000000, 0 1px 0 #000000, -1px -0 0 #000000, 1px -0 0 #000000, -1px 0 0 #000000, 1px 0 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
+}
+
+.name_ability {
+    align-items: flex-start;
+    margin-right: var(--margin_ability);
+}
+
+.percent_scale {
+    align-self: center;
+    margin-left: var(--margin_ability);
+}
+
+#scale1 {
+    margin-left: 39px;
+}
+
+#scale2,
+#scale3 {
+    margin-left: 50px;
+}
+
+#scale5 {
+    margin-left: 49px;
+}
+
+#scale1,
+#scale2,
+#scale3,
+#scale4,
+#scale5 {
+    margin-right: 20px;
+    position: relative;
+    max-width: 500px;
+    transition: all ease 2s;
+}
+
+
+/*
+*
+*   Портфолио
+*
+*/
+
+.description_title {
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+    padding-bottom: 50px;
+}
+
+.description_title>a {
+    color: var(--main_title_color);
+    text-decoration: none;
+}
+
+.portfolio {
+    display: flex;
+    padding: var(--padding_between_sections);
+    box-shadow: 0px 1px 6px 2px #323747;
+    z-index: 10;
+}
+
+.clear_list {
+    color: #6C7283;
+    text-align: center;
+    font-size: 19px;
+}
+
+.potfolio_effect {
+    background-color: #000;
+    display: flex;
+    display: inline-flex;
+    width: 33.333333333333333333333333333333%;
+    margin: 0px 0px 0px -4.5px;
+}
+
+.portfolio img {
+    width: 100%;
+    height: 250px;
+    padding: 0px;
+    opacity: 1;
+    transition: all ease 2s;
+    background: #000;
+}
+
+.portfolio img:hover {
+    opacity: 0.7;
+    -moz-opacity: 0.7;
+    filter: alpha(opacity=7) black;
+    -khtml-opacity: 0.7;
+    background-color: #000;
+}
+
+
+/*
+*
+*   Обо мне
+*
+*/
+
+#about_me {
+    color: #fff;
+    overflow: hidden;
+    transition: 1s;
+    -o-transition: 1s;
+    -moz-transition: 1s;
+    -webkit-transition: 1s;
+    padding: var(--padding_between_sections);
+    padding-bottom: 0px;
+    box-shadow: 0px 0px 5px 1px #323747;
+}
+
+.about {
+    display: flex;
+    padding-bottom: 50px;
+}
+
+.short_about_info {
+    height: 100%;
+    padding-right: 25px;
+}
+
+.short_about_info img {
+    width: 160px;
+    height: 160px;
+    border-radius: 360px;
+}
+
+.about .main_about_info>p {
+    text-align: justify;
+}
+
+.short_about_info {
+    text-align: center;
+}
+
+
+/*
+*
+*   Обратная связь
+*
+*/
+
+.back_coupling {
+    background: url('../img/endfon.jpg') no-repeat center fixed;
+    background-size: cover;
+    width: 100%;
+    background-color: #464646;
+    padding: var(--padding_between_sections);
+    z-index: 1;
+    box-shadow: 0px 0px 7px 3px #323747 inset;
+}
+
+.form_feedback {
+    display: flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    padding: 50px 0px 0px;
+}
+
+.feedback {
+    background-color: var(--main_title_color);
+    padding: 50px;
+    width: 480px;
+    background-color: #4D5366;
+    box-shadow: 0px 0px 5px 5px #323747;
+    border-radius: 15px;
+    text-align: center
+}
+
+.feedback .data,
+.feedback .subject,
+.feedback .message {
+    border: 0px;
+    padding: 10px;
+    margin: 5px 0px;
+    width: 173px;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.feedback .subject,
+.feedback .message {
+    width: 350px;
+}
+
+.feedback .message {
+    height: 100px;
+    font-family: var(--main_cont);
+    font-size: 12px;
+    font-style: normal;
+}
+
+.feedback .sub {
+    width: 350px;
+    margin-top: 5px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #323747;
+    box-shadow: 0px 0px 4px 1px var(--main_color);
+    border: 0px;
+    transition: all ease 1s;
+    -o-transition: all ease 1s;
+    -moz-transition: all ease 1s;
+    -ms-transition: all ease 1s;
+    -webkit-transition: all ease 1s;
+    border-radius: 2px;
+}
+
+.feedback .sub:hover {
+    box-shadow: 0px 0px 4px 1px var(--main_color_light);
+}
+
+.feedback>input {
+    display: flex;
+}
+
+.footer_web_page {
+    background-color: #323747;
+    height: 50px;
+    box-shadow: 0px 2px 7px 1px var(--main_color);
+    color: #fff;
+    display: flex;
+    font-size: 14px;
+}
+
+.social {
+    margin-top: 20px;
+}
+
+
+/*
+*
+*   Оформление портфолио
+*
+*/
+
+.news {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center
+}
+
+.news>article {
+    padding: 7px;
+}
+
+.main_part {
+    display: flex;
+}
+
+.left_filter {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    color: #535c68;
+    border-radius: 8px;
+    border: 1px solid rgba(71, 71, 71, 0.8);
+    margin: 15px 0px 0px;
+    box-shadow: 0px 2px 7px 1px var(--padding_between_sections);
+    align-self: flex-start;
+    box-shadow: 0px 1px 6px 2px var(--main-color-box-shadow);
+}
+
+.title_filter {
+    margin: 5px 0px;
+}
+
+.filter_content {
+    border-bottom: 0.1px solid #8395a7;
+    padding: 5px 0px;
+    margin: 0px 0px 5px 0px;
+}
+
+#short_info_project {
+    padding: 0px;
+}
+
+#short_info_project>li {
+    list-style-type: none;
+}
+
+.color_button {
+    background: var(--main_color);
+    border: 1px solid var(--main_color_light);
+    color: #E8E8E8;
+}
+
+.color_button:hover {
+    background: var(--main_color_light);
+    border: 1px solid var(--main_color);
+    color: #fff;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.6);
+    color: #535c68;
+    border-radius: 8px;
+    border: 1px solid rgba(71, 71, 71, 0.8);
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    background-color: var(--load_body);
+    border-color: var(--main_color);
+}
