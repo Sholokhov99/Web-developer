@@ -1,10 +1,9 @@
 <?php
-    require_once ($_SERVER["DOCUMENT_ROOT"].'/models/route.php');
-    $result = Route::Start();
-    require_once ($_SERVER["DOCUMENT_ROOT"].'/Models/TempData.php');
+    require_once ($_SERVER["DOCUMENT_ROOT"].'/models/TempData.php');
 
     
     //require_once ($_SERVER["DOCUMENT_ROOT"].'/scripts/Cookie.php');
+    
     $docAcc = (TempData::GetArrUserData() != null) ? 'personal_account': 'login_registration';
     $titleShop = "Название магазина";
 

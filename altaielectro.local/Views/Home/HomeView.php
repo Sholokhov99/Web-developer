@@ -1,9 +1,5 @@
-<? 
-    require_once ($_SERVER["DOCUMENT_ROOT"].'/models/route.php');
-    $result = Route::Start();
-    
-    
-    require_once($_SERVER["DOCUMENT_ROOT"]."/Views/Shaped/default/head.php"); 
+<? require_once($_SERVER["DOCUMENT_ROOT"]."/Views/Shaped/default/head.php"); 
+    require_once($_SERVER["DOCUMENT_ROOT"]."/models/banners.php"); 
 ?>
 
                 <!--
@@ -77,19 +73,19 @@
                             </span>
                         </div>
                         <div id="slide">
-                            <img src="<?=$_SERVER["DOCUMENT_ROOT"]."/App_Data/img/Sliders/slider/bg/"?>bg-notImg.jpg" alt="Картинка не загрузилась" />
-                            <img src="./slider/img/bg-1.jpg" alt="Картинка не загрузилась" />
+                            <img src="/App_Data/img/Sliders/slider/bg/bg-notImg.jpg" alt="Картинка не загрузилась" />
+                            <img src="/App_Data/img/Sliders/slider/bg/bg-notImg.jpg" alt="Картинка не загрузилась" />
                         </div>
                     </div>
                 </div>
                 <span class="banner-full-width">
-                    <img src="img/bg/notimage/Banner1200.jpg"/>
+                    <img src="<?=Banners::Generate1200x300();?>"/>
                 </span>
                 <!-- Последние ссылки -->
                 <article>
                     <div class="sliderGods">
                         <div class="title-sliderGods">
-                            <h3><font class="first_letter">П</font>оследние товары</h3>
+                            <h3><span class="first_letter">Х</span>ит продаж</h3>
                             <span class="block-user-select">
                                 <i class="fa fa-angle-left slider_left_angle" aria-hidden="true" onclick="slide1.ReturnSlide();"></i>
                                 <i class="fa fa-angle-right slider_left_angle" aria-hidden="true" onclick="slide1.NextSlide();"></i>
@@ -194,14 +190,14 @@
                 </article>
                 <article>
                   <span class="banner-full-width">
-                      <img src="img/bg/notimage/Banner1200.jpg"/>
+                      <img src="<?=Banners::Generate1200x300();?>"/>
                   </span>
                 </article>
                 <!-- Новинки -->
                 <article>
                     <div class="sliderGods">
                         <div class="title-sliderGods">
-                            <h3><font class="first_letter">Н</font>овинки</h3>
+                            <h3><span class="first_letter">Л</span>ичные предложения</h3>
                             <span class="block-user-select">
                                 <i class="fa fa-angle-left slider_left_angle" aria-hidden="true" onclick="slide2.ReturnSlide();"></i>
                                 <i class="fa fa-angle-right slider_left_angle" aria-hidden="true" onclick="slide2.NextSlide();"></i>
@@ -293,14 +289,14 @@
                 </article>
                 <article>
                   <span class="banner-full-width">
-                      <img src="img/bg/notimage/Banner1200.jpg"/>
+                      <img src="<?=Banners::Generate1200x300();?>"/>
                   </span>
                 </article>
                 <!-- Хит продаж -->
                 <article>
                     <div class="sliderGods">
                         <div class="title-sliderGods">
-                            <h3><font class="first_letter">Х</font>ит продаж</h3>
+                            <h3><font class="first_letter">Н</font>овинки</h3>
                             <span class="block-user-select">
                                 <i class="fa fa-angle-left slider_left_angle" aria-hidden="true" onclick="slide3.ReturnSlide();"></i>
                                 <i class="fa fa-angle-right slider_left_angle" aria-hidden="true" onclick="slide3.NextSlide();"></i>
@@ -392,14 +388,14 @@
                 </article>
                 <article>
                   <span class="banner-full-width">
-                      <img src="img/bg/notimage/Banner1200.jpg"/>
+                      <img src="<?=Banners::Generate1200x300();?>"/>
                   </span>
                 </article>
                 <!-- Личные предложения -->
                 <article>
                     <div class="sliderGods">
                         <div class="title-sliderGods">
-                            <h3><font class="first_letter">Л</font>ичные предложения</h3>
+                            <h3><font class="first_letter">И</font>стория просмотров</h3>
                             <span class="block-user-select">
                                 <i class="fa fa-angle-left slider_left_angle" aria-hidden="true" onclick="slide4.ReturnSlide();"></i>
                                 <i class="fa fa-angle-right slider_left_angle" aria-hidden="true" onclick="slide4.NextSlide();"></i>

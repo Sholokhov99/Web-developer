@@ -1,31 +1,8 @@
-<?
-    require_once ($_SERVER["DOCUMENT_ROOT"].'/models/route.php');
-    Route::Start();  
+<?php
     require_once ($_SERVER["DOCUMENT_ROOT"].'/models/TempData.php');
-    require_once ($_SERVER["DOCUMENT_ROOT"].'/models/SQL.php');
-    //require_once ($_SERVER["DOCUMENT_ROOT"].'/scripts/Cookie.php');
-
-    
-    
     if(TempData::GetArrUserData() != null) header('Location: PersonalAccount.php');
     
-    $class_sql = new SQL();
-    //
-    // Авторизация пользователя
-    //
-    $remember = (isset($_POST["RememberMe"]) && $_POST["RememberMe"] == true) ?true : false;
-    if(isset($_POST['authenication'])){
-        if(isset($_POST['login']) && isset($_POST['password'])){
-           if($class_sql->Authenication($_POST['login'], $_POST['password'], $remember)){
-               header('Location: index.php');
-           }
-        }
-    } else if(isset($_POST['registration'])){
-        if(isset($_POST['login']) && isset($_POST['password']) && isset($_POST['mail'])){
-            $class_sql->RegistrationUser($_POST['login'], $_POST['mail'], $_POST['password'], $remember);
-            unset($_POST);
-        }
-    }
+    require_once ($_SERVER["DOCUMENT_ROOT"].'/models/SQL.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -56,7 +33,7 @@
                 -->
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-login" role="tabpanel" aria-labelledby="nav-login-tab">
-                        <form method="post">
+                        <form method="post" action="/models/login-registration/sign.php">
                             <input type="text" placeholder="Логин*" name="login" autocomplete="off"/>
                             <input type="password" placeholder="Пароль*" name="password"/>
                             <div class="tabs-checkbox">

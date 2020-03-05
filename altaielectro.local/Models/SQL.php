@@ -14,7 +14,10 @@ class SQL{
     private $_strPassword = "mysql";
     private $_strCharset = "utf8";
     private $_pbo = null;
-
+    
+    //
+    //  Подключение к БД
+    //
     private function ConnectDB(){
         try{
             $this->pbo = new PDO(
@@ -26,9 +29,13 @@ class SQL{
         }
     }
 
+    //
+    //  Отключение от БД
+    //
     private function CloseDB(){
         $this->_pbo = null;
     }
+    
     //
     //  Получение данных SELECT запроса
     //
@@ -43,6 +50,7 @@ class SQL{
             return null;
         }
     }
+    
     //
     //  Получение данных INSERT запроса
     //
@@ -59,21 +67,23 @@ class SQL{
             return $result->execute($values);
         }
     }
-    //
+    
+//
     // Authenication
     //
     public function Authenication($login, $password, $rememberMe){
         $sql = "SELECT * FROM `Users` WHERE `Login`='{$login}' AND `Password`='{$password}'";
-        if(($data = $this->SELECT($sql)) != null){
+        
+        if(($data =$this->SELECT($sql)) != null){
             //  Сохранение данных пользователя в памяти
-            TempData::SetArrUserData($data->fetch());
+            return TempData::SetArrUserData($data->fetch());
             //Cookie::SetLoginData($login, $password,($rememberMe) ? time()+3600:0);
-            return true;
         } else{
             return false;
         }
     }
-    //
+    
+//
     //  Registration
     //
     public function RegistrationUser($login, $password, $mail, $rememberMe){
@@ -83,4 +93,63 @@ class SQL{
         //Cookie::SetLoginData($login, $password,($rememberMe) ? time()+3600:0);
         return $this->INSERT($sql);
     }
+    
+    //
+    //  Создание параметров для запроса
+    //
+    private function CreateBindParam($arr, $pdo, $sql){
+        //$_pbo
+        for($index = 0; $index < count($arr); $index++){
+            $pdo->bindParam($arr[index][0], $arr[index][1]);
+        }
+        
+        return $pdo;
+    }
+    
+
+        //
+    //  Get Page
+    //
+    public function GetPage($controller, $action, $action_id){
+        $params = [
+            "Controller" => [":controller", $controller],
+            "Action" => [":action", $action],
+            "Action_id" => [":action_id", $action_id]
+        ];
+        
+        //  Проверка на загрузку главной страницы
+        if(!empty(($action))){            
+            $sql = "SELECT `actions`.`Template_URI`, `actions`.`Access`,"
+                    . "`controllers`.`Controller_URI` FROM"
+                    . "`actions` LEFT JOIN `controllers` ON"
+                    . "`actions`.`ID_controller` = `controllers`.`Controller_ID` "
+                    . "WHERE `actions`.`Name_action` = 'Home' AND `controllers`.`Name_controller` = 'HomeController';";
+            
+            
+            // Создание параметров
+            //$this->CreateBindParam($params, $this->_pbo);
+            
+            $result = $this->SELECT($sql);
+        
+            $value = $result->fetch();
+            
+           // var_dump($value);
+            //echo "<br><br>";
+
+            /*
+            $data = [
+                "Content" => $value[0],
+                "Access" => $value[1],
+                "URI" => $value[2],
+            ];*/
+            return [
+                "Template" => $value[0],
+                "Access" => $value[1],
+                "Controller_URI" => $value[2],
+            ];
+        }
+        
+
+    }
+    
 }

@@ -1,4 +1,4 @@
-<?
+<?php
 echo '</div><!-- Content grid -->
         </main>
         <footer class="footer">
@@ -56,11 +56,11 @@ echo '</div><!-- Content grid -->
         <li class="title">Newsletter</li>
         <li>Подпишитесь на нашу рассылку и получите скидку 10% на первую покупку .</li>
         <li>
-          <form method="get">
+          <form method="post" action="/models/Newsletter.php">
             <span>
               <input type="email" placeholder="Email" name="newsletter_input" />
               <button type="submit" name="newsletter_sub" class="newsletter-send">
-                <img src="/img/icons/send.png" alt="отправить" />
+                <img src="/app_data/img/icons/send.png" alt="отправить" />
               </button>
             </span>
           </form>
@@ -76,9 +76,9 @@ echo '</div><!-- Content grid -->
     </div> <!-- Class info-developer -->
   </div> <!-- Class content_grid -->
 </footer>
-        <script src="slider/js/script.js" ></script>
+        <script src="/../../../scripts/sliders/slider/script.js" ></script>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="bootstrap441/js/bootstrap.min.js" ></script>
+        <script src="/../../../scripts/bootstrap/bootstrap.min.js" ></script>
 
     </body>
 </html>';

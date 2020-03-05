@@ -1,6 +1,5 @@
-<?
+<?php
     //session_set_cookie_params($_SESSION['LiveCookie']);
-    session_start();
     class TempData{
 
         #region UserData
@@ -11,7 +10,9 @@
         //  Занесение данных пользователя
         //
         public static function SetArrUserData($arr){
-            if(count($arr) === 24){
+            if($arr !== false && count($arr) === 24){
+                //  Настройка время жизни сессии               
+                
                 $_SESSION['arrUserData'] = [
                     "ID"         => $arr[0],
                     "Login"      => $arr[1],
@@ -30,13 +31,15 @@
                     "TypeReg"    => $arr[10],
                     "Access"     => $arr[11],
                 ];
-            }
+                return true;
+            } else
+                return false;
         }
         //
         //  Очистка данных пользователя
         //
         public static function ClearArrUserData(){
-            $_SESSION['arrUserData'] = array();
+            //$_SESSION['arrUserData'] = array();
         }
         #endregion
     }
